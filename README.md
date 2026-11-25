@@ -26,7 +26,6 @@ Tienes **2 opciones muy sencillas**:
 ### Opción 1: Archivo automático (Recomendado)
 1. Coloca tu canción favorita en formato MP3 en esta misma carpeta (`flores-web`).
 2. Nómbrala exactamente: **`musica.mp3`**
-   *(Ruta: `C:\Users\HP\.gemini\antigravity\scratch\flores-web\musica.mp3`)*
 3. ¡Listo! La web la detectará y la reproducirá en bucle romántico automáticamente al iniciar sesión.
 
 ### Opción 2: Selector en vivo desde la página
