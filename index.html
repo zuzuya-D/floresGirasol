@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Feliz Día Amor</title>
+    <meta name="">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Main Flower & Particle Canvas -->
+        <div id="canvas-container">
+            <canvas id="flowerCanvas"></canvas>
+        </div>
+
+        <!-- Pantalla de Login Romántica -->
+        <div class="login-overlay" id="loginOverlay">
+            <div class="login-card" id="loginCard">
+                <div class="login-glow"></div>
+                <div class="login-sunflower-icon">🌻</div>
+                <h1 class="login-title">Para Ti, Mi amor ✨</h1>
+                <p class="login-subtitle">Ingresa para descubrir tu detalle especial</p>
+
+                <form id="loginForm" class="login-form" autocomplete="off" onsubmit="return false;">
+                    <div class="input-wrapper">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="loginUser" placeholder="Usuario" autocomplete="off" spellcheck="false" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="loginPass" placeholder="Contraseña" autocomplete="off" required>
+                        <button type="button" id="togglePassBtn" class="pass-toggle" title="Mostrar u ocultar contraseña">👁️</button>
+                    </div>
+
+                    <div id="loginError" class="login-error-msg"></div>
+
+                    <button type="submit" id="loginSubmitBtn" class="login-submit-btn">
+                        <span>Abrir mi sorpresa</span>
+                        <span class="btn-sparkle">✨</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Banner de Dedicatoria Flotante (Pill) -->
+        <div class="dedication-banner" id="dedicationBanner">
+            <span class="banner-dot" id="bannerDot"></span>
+            <span class="banner-text" id="bannerText">Trazando girasoles con amor... 🌻</span>
+        </div>
+
+        <!-- Carta de Dedicatoria Especial Flotante -->
+        <aside class="dedication-card" id="dedicationCard">
+            <div class="card-header">
+                <div class="card-tag">
+                    <span>💌</span> Un detalle eterno
+                </div>
+                <button class="card-close-btn" id="cardCloseBtn" title="Ocultar carta">&times;</button>
+            </div>
+            <h2 class="card-title">¡Feliz día amor! ✨</h2>
+            <p class="card-body">
+Te quiero mucho 💛
+
+Estas flores amarillas están hechas con código y nunca se van a marchitar.
+            </p>
+            <div class="card-signature">🌻</div>
+        </aside>
+
+        <!-- Barra Inferior de Controles -->
+        <footer class="controls-bar" id="controlsBar">
+            <button class="btn-icon" id="playPauseBtn" title="Pausar / Reanudar trazado">
+                ⏸️
+            </button>
+            <button class="btn-icon" id="replayBtn" title="Volver a armar desde cero">
+                🔄
+            </button>
+
+            <!-- Selector de velocidad -->
+            <div class="speed-control">
+                <label for="speedSelect">Velocidad</label>
+                <select id="speedSelect" class="speed-select">
+                    <option value="slow">🐢 Lento</option>
+                    <option value="normal" selected>🌿 Normal</option>
+                    <option value="fast">⚡ Rápido</option>
+                    <option value="instant">💥 Instantáneo</option>
+                </select>
+            </div>
+            <!-- cargar musica -->
+            <button class="btn-icon" id="uploadMusicBtn" title="cargar music">📁</button>
+
+            <!-- Ver / Ocultar carta -->
+            <button class="btn-icon" id="letterBtn" title="Ver ">
+                💌
+            </button>
+
+            <!-- Exportar Imagen PNG -->
+            <button class="btn-icon" id="captureBtn" title="Descargar ramo como imagen (PNG)">
+                📸
+            </button>
+
+            <!-- Pantalla completa -->
+            <button class="btn-icon" id="fullscreenBtn" title="Pantalla completa">
+                ⛶
+            </button>
+        </footer>
+
+        <!-- Audio integrado en el código (se reproduce automáticamente sin botones) -->
+        <audio id="bgMusic" src="mp3/musi.mp3" loop preload="auto"></audio>
+
+        <!-- Mensajes Toast -->
+        <div class="toast-msg" id="toastMsg"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/flowers-data.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
